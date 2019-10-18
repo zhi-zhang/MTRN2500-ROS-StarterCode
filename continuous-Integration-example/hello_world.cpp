@@ -1,10 +1,10 @@
 
-// SPDX-License-Identifier: Apache-2.0
+// SPDX-License-Identifier: MIT
 /**
  *  \brief     Hellow world example to show CI working
  *  \details   We will use fmtlib that will be standardised in c++20
  *  \author    Zhihao Zhang \version   1.0 \date      2019
- *  \copyright Apache-2.0.
+ *  \copyright MIT
  **/
 
 #include "fmt/printf.h"      // https://fmt.dev/6.0.0/api.html
