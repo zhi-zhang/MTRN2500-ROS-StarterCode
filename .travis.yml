@@ -1,0 +1,28 @@
+language: cpp
+
+services:
+  - docker
+  
+compiler:
+  - gcc
+
+jobs:
+  include:
+  #  - stage: install dependency
+      script:
+        - docker pull osrf/ros:dashing-desktop
+        - docker run --name dashing -dit -v ${TRAVIS_BUILD_DIR}:/root/src/ ${IMAGE} osrf/ros:dashing-desktop /bin/bash
+        - docker ps -a
+    
+  #  - stage: copy source files
+   #   script:
+        - docker exec dashing /bin/bash -c 'ls /root/src/'
+
+   # - stage: lint
+   #   script:
+        - docker exec dashing /bin/bash -c 'apt update && apt install clang-format-8'
+        - docker exec dashing /bin/bash -c 'clang-format-8 --help'
+    
+  #  - stage: build
+   #   script:
+        - docker exec dashing /bin/bash -c 'source `find /opt/ros -maxdepth 2 -name local_setup.bash | sort | head -1`;cd /root/src;colcon build --parallel-workers 4'
