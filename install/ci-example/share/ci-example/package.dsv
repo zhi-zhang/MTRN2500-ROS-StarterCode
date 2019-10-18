@@ -1,0 +1,8 @@
+source;share/ci-example/hook/cmake_prefix_path.ps1
+source;share/ci-example/hook/cmake_prefix_path.dsv
+source;share/ci-example/hook/cmake_prefix_path.sh
+source;share/ci-example/local_setup.bash
+source;share/ci-example/local_setup.dsv
+source;share/ci-example/local_setup.ps1
+source;share/ci-example/local_setup.sh
+source;share/ci-example/local_setup.zsh
