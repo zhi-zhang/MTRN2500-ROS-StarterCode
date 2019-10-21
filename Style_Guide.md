@@ -56,6 +56,7 @@ The following language features are banned because either better alternative exi
 * using namespace std: See [CppCoreGuidelines SF.6: Use using namespace directives for transition, for foundation libraries...](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rs-using)
 * C macro: Macro is just dumb text replacement that can cause unexpected result. Use constexpr variable for magic constants instead. See [cppCoreGuidelines ES.45: Avoid "magic constants"; use symbolic constants](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-magic)
 * Using namespace in global scope in a header. Doing so may cause unpredicatble name collision with user's code. [cppCoreGuidelines SF.7: Don't write using namespace at global scope in a header file](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rs-using-directive)
+* double underscore __ or leading underscore in names. Most of them are reserved by the standard. 
 
 ### Line Length
 * Our maximum line length is **80** characters. 
